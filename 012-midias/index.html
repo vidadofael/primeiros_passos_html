@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias e áudios</title>
+</head>
+<body>
+    <h1>Mídias e áudios</h1>
+
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <hr>
+    <pre>
+        <code>
+            &lt;picture&gt;
+                &lt;source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"&gt;
+                &lt;source media="(max-width: 1000px )" srcset="imagens/foto-m.png" type="image/png"&gt;
+                &lt;img src="imagens/foto-g.png" alt="Imagem flexível"&gt;
+            &lt;/picture&gt;
+        </code>
+    </pre>
+    <hr>
+    <i>
+        <p>Assim, colocando as imagens da menor pra para a maior, dependendo do tamanho do dispositivo ou navegador, ela irá carregar a imagem de acordo.</p>
+        <p>Para experimentar, movimente o tamanho deste navegador para ver as diferentes imagens de tamanhos diferentes.</p>
+        <p>Lembrando que a ordem da escrita do HTML tem que obedecer da menor imagem (vem primeiro) para a maior imagem.</p>
+    </i>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1000px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture><hr>
+
+    <h1>Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <i>
+        <pre>
+            <code>&lt;audio src="audio/audio1.mp3" controls autoplay&gt;&lt;/audio&gt;</code>
+        </pre>
+
+            <p>Os dados do áudio devem ser preenchidos assim como nas imagens, mas com os parâmetros "controls" e "autoplay" dentro da tag &lt;audio&gt;</p>
+       
+    </i> <br>
+    <audio src="audio/audio1.mp3" controls autoplay></audio>
+    <h3>Áudios que podem ser carregados na maioria dos navegadores: .mp3, .wav, .ogg dentre outros</h3>
+
+    <h2>Temos uma outra maneira:</h2>
+
+    <audio preload="metadata" autoplay controls loop>
+        <source src="audio/audio1.mp3" type="audio/mpeg">
+        <source src="audio/audio1.ogg" type="audio/ogg">
+        <source src="audio/audio1.wav" type="audio/wav">
+    </audio>
+
+    <br><br>
+
+    <i>
+        <pre>
+            <code>
+                &lt;audio preload="metadata" autoplay controls loop&gt;
+                    &lt;source src="audio/audio1.mp3" type="audio/mpeg"&gt;
+                    &lt;source src="audio/audio1.ogg" type="audio/ogg"&gt;
+                    &lt;source src="audio/audio1.wav" type="audio/wav"&gt;
+                &lt;/audio&gt;
+            </code>
+        </pre>
+    </i> 
+    <br><br>
+    <hr>
+    <p>=metadata para que ele não reproduza todo o audio antes do comando do usuário.</p>
+    <p>=autoplay para que o audio seja carregado mas não seja reproduzido de imediato, aguardando o comando do usuário.</p>
+    <p>=controls para que o player fique disponível na tela para o usuário manipular.</p>
+    <p>=loop para que o áudio repita até que o usuário pare o áudio no player.</p>
+    <hr>
+    <b>As outras opções - se voce tiver - devem ser carregadas na mesma pasta de arquivos, isso resolve o problema de diferentes tipos de navegadores. Caso um não seja reproduzido, o outro será.</b>
+
+<hr>
+
+    <h1>Inserindo Vídeos localmente</h1>
+    <I>
+        <p>ARQUIVOS MP4, M4V (PEQUENO MAS DE BOA QUALIDADE) E OGV HOSPEDADOS NO MEU PRÓPRIO SERVIDOR.</p>
+    </I>
+
+    <p>
+        <pre>
+            <code>
+                &lt;video poster="imagens/img.png" src="video/videomp4.mp4 " controls autoplay loop width="200"&gt;
+                    &lt;source src="video/videowebm.webm" type="video/webm"&gt;
+                    &lt;source src="video/Videom4v.m4v" type="video/m4v"&gt;
+                    &lt;source src="video/videomp4.mp4" type="video/mp4"&gt;
+                &lt;/video&gt;
+            </code>
+        </pre>
+    </p>
+    <i>
+        <h3>Observação: Essa prática pode ser muito caro para seu cliente pois pode consumir um alto número de banda dependendo do acesso que o site dele tiver. ATENÇÃO!!!</h3>
+        <p>### = &lt; Caso o navegador não carregue nenhum dos arquivos, uma mensagem você deve escrever em uma tag &lt;p&gt; com este aviso, pois o vanegador vai tentar reproduzir todos os arquivos da lista, se ele não conseguir, a imagem é exibida.</p>
+        <p>### = &lt; Note que o atributo "poster" foi colocado dentro da tag &lt;video&gt;, isso para que no lugar do vídeo seja mostrado uma tumbnail (melhor imagem que descreve o vídeo) pra chamar a atenção do usuário lhe dando uma prévia do conteúdo.</p>
+    </i>
+
+    <video poster="imagens/img.png" src="video/videomp4.mp4 " controls autoplay loop width="200">
+        <source src="video/videowebm.webm" type="video/webm">
+        <source src="video/Videom4v.m4v" type="video/m4v">
+        <source src="video/videomp4.mp4" type="video/mp4">
+        <p>Seu navegador não tem compatibilidade com reprodução.</p>
+    </video>
+
+<hr>
+    <h1>Hospedagem Externa YOUTUBE</h1>
+    <h3>Veremos uma forma de hospedagem com maior custo benefício:</h3>
+    <p>Uma forma bem melhor, mais fácil e com menos consumo de banda é colocar o link do vídeo já hospedado externamente, nesse caso usaremos o Youtube. <br>Simples!</p>
+    <p>Pra isso basta pegar o link dentro da função de "compartilhar" do vídeo do youtube, na função "incorporar" copie o código gerado e cole direto no código HTML.</p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fTQdUtvgbhQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <pre>
+        <code>
+            &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/fTQdUtvgbhQ" title="YouTube
+            video player" frameborder="0" allow="accelerometer; 
+            autoplay; clipboard-write; encrypted-media;  gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</code>
+    </pre>
+    <h3>Desta forma você não consome dados do servidor próprio e sim do próprio Youtube.</h3>
+    <p>Insentive seu cliente a ter conteúdos de vídeos no Youtube para melhorar a navegação e hospedagem.</p>
+    <p>Caso seu cliente queira que esse vídeo só esteja disponível para visualização no site, escolha fazer esse procedimento com o Vimeo. </p>
+    <p>Lá é oferecido a opção de deixar os vídeos privados para que os sites de busca não o carreguem se ele estiver privado. </p>
+    <p>O procedimento de carregar o link é o mesmo, <b>porém a hospedagem do Vímeo é paga</b></p>
+
+<hr>
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+Quem sou eu: (h1)
+imagem perfil 150x150
+parágrafo: Meu nome é Raphael Dias (negrito no nome), sou estudante do curso de Análise e Desenvolvimento 
+de Sistemas 2°(caracter especial) período. Hoje acompanho e estudo a fundo o curso do Professor Gustavo Guanabara 
+em sua plataforma de ensino apoado pela Hostnet e desenvolvo meus próprios sites para web e futuramente vou
+partir para o desenvolvimento mobile.
+
+h1) Como falar comigo?
+
+ul + li
+link - Se inscreve lá no meu canal
+link - Acesse meu repositório público no github
+link - Me segue lá no Instagram
+link - Me adiciona lá no LinkedIN
+link - Me segue lá no Twitter
+link - Me acompanha no Facebook
+
+fecha li
+

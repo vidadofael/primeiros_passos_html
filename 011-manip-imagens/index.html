@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias</title>
+</head>
+
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <hr>
+    &lt;picture&gt;
+        &lt;source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"&gt;<br><br>
+        <b>dentro dessa tag:</b> &lt;source media="(max-width: 1000px )" srcset="imagens/foto-m.png" type="image/png"&gt;<br><br>
+        &lt;img src="imagens/foto-g.png" alt="Imagem flexível"&gt;
+    &lt;/picture&gt;<br><br>
+    <hr>
+    <i>
+        <p>Assim, colocando as imagens da menor pra para a maior, dependendo do tamanho do dispositivo ou navegador, ela irá carregar a imagem de acordo.</p>
+        <p>Para experimentar, movimente o tamanho deste navegador para ver as diferentes imagens de tamanhos diferentes.</p>
+        <p>Lembrando que a ordem da escrita do HTML tem que obedecer da menor imagem (vem primeiro) para a maior imagem.</p>
+    </i>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1000px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+</body>
+ 
+</html>

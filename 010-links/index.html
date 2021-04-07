@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p>Você pode acessar o meu <a href="https://github.com/vidadofael" target="_blanck" rel="external">repositório público no GitHub.</a></p>
+    <p>Usa-se as tags para link &lt;a&gt; e dentro dela para abrir uma nova página usa se os atributos dentro da tag a assim:</p>
+    <i>&lt;a href="https://github.com/vidadofael" target="_blanck" rel="external"&gt;repositório público no GitHub.&lt;/a&gt;&lt;/p&gt;</i>
+    <p>Desta forma o usuário não perde a sua página original, pois clicando no link abrirá uma nova aba fazendo com que a sua página não feche com a abertura de uma nova página.</p>
+<hr><br>
+    <p>Agora neste exemplo não tem os atributos dentro do link que faz com que o link abra na mesma página fazendo com que o usuário perca a página do seu site dependendo da usabilidade.</p>
+    <p>Você também pode acessaar meu <a href="https://www.youtube.com/channel/UCkehkQG2QkYxTU7a4fUu7jQ" target="_blanck" rel="external">perfil no Youtube</a>.</p>
+    <hr>
+    <h1>Usando links internos</h1>
+        <p>A qui está o link para a <a href="pag002.html" rel="next">segunda página</a> </p>
+
+        <hr><h1>Para não indexar os links que compõe o conteúdo da sua página:</h1>
+        <p>No caso de você não aval ao material do link que voce coloca ou para o google não indexar aquele link (dar enfase a ele na busca) basta voce adicionar atributos dentro link, assim: <p> &lt;a href="(link)" target="_blank" rel="nofollow"&gt;&lt;a/&gt;</p>
+<hr>
+
+        <h2>TERCEIRA PÁGINA INDO E VOLTANDO</h2>
+
+        <p>Aqui está o link para a <a href="noticias/pag003.html" rel="next">terceira página</a> </p>
+
+        <p>Para ir a página 3: </p>
+        &lt;p&gt;Aqui está o link para a &lt;a href="noticias/pag003.html" rel="next">terceira página&lt;/a&gt;
+<hr>
+    <h1>Links para download</h1>
+    <p>Para disponibilizar arquivos para download é bem simples, basta usar os atrubutos a seguir dentro da tag &lt;a&gt;.</p>
+        &lt;ul&tg;
+            &lt;li&gt;&lt;a href="livro/curriculo_novacarreira21.pdf" download="meulivro.pdf" type="aplication/pdf"&gt;Baixar currículo em PDF&lt;/a&gt;&lt;/li&gt;<br><br>
+            &lt;li&gt;&lt;a href="livro/curriculo_novacarreira21.zip.zip" download="meulivro.zip" type="aplication/zip"&gt;Currículo compactado em zip&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+
+        <ul>
+            <li><a href="livro/curriculo_novacarreira21.pdf" download="meulivro.pdf" type="aplication/pdf">Baixar currículo em PDF</a></li>
+            <li><a href="livro/curriculo_novacarreira21.zip.zip" download="meulivro.zip" type="aplication/zip">Currículo compactado em zip</a></li>
+        </ul>
+<hr>
+</body>
+</html>
